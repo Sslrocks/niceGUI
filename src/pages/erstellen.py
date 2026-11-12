@@ -14,7 +14,7 @@ def erstellen_page():
             
         dauer_input = ui.number('Dauer (in Minuten)', value=60, min =15).classes('w-full')    
         beschreibung_input =ui.textarea(label='Beschreibung', placeholder='Beschreibung des Termins').classes('w-full')
-        ui.button('Termin erstellen', on_clicgitk=lambda: termin_einstellen).classes('w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300')
+        ui.button('Termin erstellen', on_click=lambda: termin_einstellen).classes('w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300')
 
         def termin_einstellen():
             if not titel_inpput.value or not datum_input.value or not uhrzeit_input.value:
